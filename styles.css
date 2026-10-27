@@ -1,0 +1,83 @@
+body {
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+  background-color: rgb(252, 246, 238);
+}
+
+.name {
+  font-family: system-ui, sans-serif;
+  font-size: 50px;
+  color: #2b2b2c;
+}
+
+.bio {
+  font-family: system-ui, sans-serif;
+  font-size: 20px;
+  color: #2b2b2c;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.social-links-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Styles the navigation list container */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Controls how the navigation list items are displayed */
+nav li {
+  display: inline;
+}
+
+/* Style the navigation links */
+nav a {
+  text-decoration: none;
+  padding: 20px;
+  color: #2b2b2c;
+  font-family: system-ui, sans-serif;
+  font-size: 23px;
+}
+
+/* Add particles in the background */
+#tsparticles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.intro {
+  position: relative;
+  isolation: isolate;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 8%;
+  overflow: hidden;
+}
+
+.intro > * {
+  position: relative;
+  z-index: 1;
+}
