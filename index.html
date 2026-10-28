@@ -29,7 +29,7 @@
             class="social-links-icon"
           />
         </a>
-        <a href="mailto:dolores.messer@gmail.com">
+        <a href="mailto:dolores.messer.data@gmail.com">
           <img
             src="icons/email-black.svg"
             alt="Email"
@@ -40,7 +40,7 @@
     </main>
 
     <!-- JavaScript: Particles in the background -->
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/engine@4/tsparticles.engine.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tsparticles/engine@4/tsparticles.engine.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@4/tsparticles.slim.bundle.min.js"></script>
 
     <script>
@@ -54,15 +54,22 @@
             background: { color: "transparent" },
             particles: {
               number: {
-                value: 45,
+                value: 80,
                 density: { enable: true },
               },
-              color: { value: "#8196A7" },
-              opacity: { value: 1 },
-              size: { value: { min: 4, max: 15 } },
+              paint: {
+                fill: {
+                  enable: true,
+                  color: {
+                    value: ["#cad9e6", "#ffe3e7", "#ddebe2"],
+                  },
+                },
+              },
+              opacity: { value: 0.8 },
+              size: { value: { min: 2, max: 7 } },
               move: {
                 enable: true,
-                speed: 0.6,
+                speed: 0.4,
                 direction: "none",
                 random: true,
                 straight: false,
@@ -72,8 +79,20 @@
             },
             interactivity: {
               events: {
-                onHover: { enable: false },
-                onClick: { enable: false },
+                onHover: {
+                  enable: true,
+                  mode: "repulse",
+                },
+                onClick: {
+                  enable: false,
+                },
+              },
+              modes: {
+                repulse: {
+                  distance: 75,
+                  speed: 0.05,
+                  duration: 0.01,
+                },
               },
             },
             detectRetina: true,
